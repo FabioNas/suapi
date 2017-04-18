@@ -1,0 +1,19 @@
+AddHandler php7-script .php
+#suPHP_ConfigPath /home/cpa3/public_html/sites/pipeside.com/projs/colabor2
+suPHP_ConfigPath /home/cpa3/public_html/projs/colabor2
+#/home/storage/8/f0/8e/cpa3/public_html/projs/colabor2
+
+#AddDefaultCharset utf-8
+#AddCharset utf-8 .html .json .js .css
+
+#DirectoryIndex teste.php index.php # testa se .htaccess esta funcionando
+RewriteEngine On
+#RewriteBase /
+#RewriteBase /colabor/
+RewriteBase /projs/colabor2/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.php [L]
+#RewriteRule . /colabor2/index.php [L]
+RewriteRule . /projs/colabor2/index.php [L]
